@@ -1,3 +1,7 @@
+# Angular mateial
+
+This App uses angular cli and angular material .
+
 # Jan25
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.4.
