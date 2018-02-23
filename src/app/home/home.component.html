@@ -1,0 +1,84 @@
+<!--<mat-sidenav-container>
+  <mat-sidenav>Start</mat-sidenav>
+  <mat-sidenav-content>Main</mat-sidenav-content>
+</mat-sidenav-container>-->
+
+<div class="example-container">
+  <mat-toolbar color="primary" class="example-toolbar">
+    <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
+    <h1 class="example-app-name">Responsive App</h1>
+  </mat-toolbar>
+
+  <mat-sidenav-container class="example-sidenav-container">
+    <mat-sidenav #snav fixedTopGap="56">
+      <mat-nav-list>
+        <a mat-list-item routerLink="." *ngFor="let nav of fillerNav">{{nav}}</a>
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <p *ngFor="let content of fillerContent">{{content}}</p>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
+
+<!--<mat-sidenav-container class="example-container" *ngIf="shouldRun">
+  <mat-sidenav #sidenav [mode]="mode.value">
+    <p><button mat-button (click)="sidenav.toggle()">Toggle</button></p>
+    <p>
+      <mat-radio-group class="example-radio-group" [formControl]="mode">
+        <label>Mode:</label>
+        <mat-radio-button value="over">Over</mat-radio-button>
+        <mat-radio-button value="side">Side</mat-radio-button>
+        <mat-radio-button value="push">Push</mat-radio-button>
+      </mat-radio-group>
+    </p>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <p><button mat-button (click)="sidenav.toggle()">Toggle</button></p>
+    <p>
+      <mat-radio-group class="example-radio-group" [formControl]="mode">
+        <label>Mode:</label>
+        <mat-radio-button value="over">Over</mat-radio-button>
+        <mat-radio-button value="side">Side</mat-radio-button>
+        <mat-radio-button value="push">Push</mat-radio-button>
+      </mat-radio-group>
+    </p>
+  </mat-sidenav-content>
+</mat-sidenav-container>-->
+
+<!--<mat-sidenav-container class="example-container">
+  <mat-sidenav opened mode="side">
+    <div>Start content</div>
+    <div>Start content</div>
+    <div>Start content</div>
+    <div>Start content</div>
+  </mat-sidenav>
+</mat-sidenav-container>-->
+
+<!--<mat-toolbar>
+  <span align="center">Dashboard</span>
+</mat-toolbar>-->
+<h3 align="center">Welcome to my App</h3>
+<p>
+  home works!
+</p>
+
+<div *ngIf="isDisabled">
+  Using Interpollation
+  <img src="{{imagePath}}" alt="logo">
+</div>
+<div *ngIf="!isDisabled">
+  Using Property Binding
+  <img [src]="imagePath" alt="logo">
+
+</div>
+<button class="colorClass" [class]="dynamicClass" (click)="enableDisableBtn()">Click ME </button>{{isDisabled}}
+
+<br>
+<div>
+  <ul *ngFor="let array of arrayDetails">
+    <li>{{array.name}}</li>
+  </ul>
+</div>
